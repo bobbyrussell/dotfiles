@@ -23,10 +23,11 @@ cd $dir
 echo "DONE!"
 
 ######### backing up dotfiles into $old_dir...
+echo "Backing up old files and symlinking new files..."
 for file in $files; do 
-	echo "Backing up the old .files..."
+	echo "Backing up old .$file ..."
 	mv ~/.$file $old_dir
-	echo "DONE! Creating symlinks now..."
+	echo "DONE! Symlinking .$file now..."
 	ln -s $dir/$file ~/.$file
 done
 echo "GOOD JOB! All of your old dotfiles should be backed up"
