@@ -6,7 +6,7 @@ INSTALL
 -------
 Installation is easy 
 ```shell
-~$ git clone https://github.com/bobbyrussell/dotfiles
+~$ git clone https://github.com/bobbyrussell/dotfiles.git
 ~$ cd dotfiles/
 ~/dotfiles$ chmod +x install.sh
 ~/dotfiles$ ./install.sh
