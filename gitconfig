@@ -34,6 +34,7 @@
 	singlekey = true
 [merge]
 	summary = true
+	tool = vimdiff
 [merge "bundlelock"]
 	name = lock Gemfile
 	driver = bundle install
@@ -54,3 +55,6 @@
 	default = tracking
 [rebase]
 	autosquash = true
+[user]
+	name = Bobby Russell
+	email = bobbyrussell@gmail.com
