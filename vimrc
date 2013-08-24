@@ -9,8 +9,11 @@ filetype plugin indent on
 " Updated Indentation for Ruby and HTML
 filetype indent on
 filetype on
+au BufRead,BufNewFile *.erb set filetype=ruby
+au BufRead,BufNewFile *.scss set filetype=css
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+autocmd Filetype css setlocal ts=2 sts=2 sw=2
 
 set backspace=indent,eol,start
 set backupskip=/tmp/*,/private/tmp/*
