@@ -6,7 +6,6 @@ endif
 syntax on
 filetype plugin indent on
 
-" Updated Indentation for Ruby and HTML
 filetype indent on
 filetype on
 au BufRead,BufNewFile *.erb set filetype=ruby
@@ -14,12 +13,16 @@ au BufRead,BufNewFile *.scss set filetype=css
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype css setlocal ts=2 sts=2 sw=2
+autocmd FileType php setlocal ts=4 sts=4 sw=4
+autocmd FileType javascript setlocal ts=4 sts=0 sw=4 noexpandtab
+
+set clipboard=unnamed
 
 set backspace=indent,eol,start
 set backupskip=/tmp/*,/private/tmp/*
 set stmp
 
-au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
+au FileType python setlocal tabstop=4 expandtab shiftwidth=4 softtabstop=4 tw=79
 
 set visualbell
 
