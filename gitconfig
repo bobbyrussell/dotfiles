@@ -58,3 +58,5 @@
 [user]
 	name = Bobby Russell
 	email = bobbyrussell@gmail.com
+[http]
+	sslVerify = false
