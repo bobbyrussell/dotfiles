@@ -29,21 +29,21 @@ set showmatch
 set incsearch
 set ruler
 set cursorline
+
 hi CursorLine term=bold cterm=bold ctermbg=DarkGrey
 
 filetype indent on
 filetype on
 
 " handle related files
-au BufRead,BufNewFile *.erb set filetype=ruby
-au BufRead,BufNewFile *.scss set filetype=css
-au BufRead,BufNewFile *.json set ft=javascript
-au BufRead,BufNewFile *.ctp set ft=php
+au BufRead,BufNewFile *.erb     set filetype=ruby
+au BufRead,BufNewFile *.scss    set filetype=css
+au BufRead,BufNewFile *.json    set ft=javascript
+au BufRead,BufNewFile *.ctp     set ft=php
 
-" formatting
-au FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 tw=80
+" formatting by filetype
+au FileType python,php setlocal ai ts=4 sw=4 sts=4 tw=80 et
 au Filetype ruby,yaml,haml,html,sass,javascript,css setlocal ai ts=2 sts=2 sw=2 et
-au FileType php setlocal ts=4 sts=4 sw=4 et
 
 " copy and paste with the system clipboard
 set clipboard=unnamed
