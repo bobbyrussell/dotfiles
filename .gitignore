@@ -1,2 +1,2 @@
-# Ignore local includes
-*.local
+# Only ignore gitconfig.local
+gitconfig.local
