@@ -15,7 +15,10 @@
 	unpulled = !"PROJ_BRANCH=$(git symbolic-ref HEAD | sed 's|refs/heads/||') && git fetch && git log HEAD..origin/$PROJ_BRANCH"
 	add-untracked = !"git status --porcelain | awk '/\\?\\?/{ print $2 }' | xargs git add"
 	ln = log --pretty=format:'%Cblue%h %Cred* %C(yellow)%s'
-	reset-authors = commit --amend --reset-author -CHEAD
+    reset-authors = commit --amend --reset-author -CHEAD
+    hist = log --pretty=format:'%C(yellow)%h %Cred* %ad | %Cgreen%s%d [%an]' --graph --date=short
+    type = cat-file -t
+    dump = cat-file -p
 [branch]
 	autosetuprebase = always
 [color]
@@ -26,6 +29,7 @@
 	whitespace = warn
 	autocrlf = input
 	safecrfl = true
+	safecrlf = true
 [help]
 	autocorrect = 10
 [include]
@@ -57,6 +61,6 @@
 	autosquash = true
 [user]
 	name = Bobby Russell
-	email = bobbyrussell@gmail.com
+	email = brussell@fiu.edu
 [http]
 	sslVerify = false
