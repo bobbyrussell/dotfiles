@@ -19,6 +19,10 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
+" multiple indents without losing highlight
+vnoremap < <gv
+vnoremap > >gv
+
 set expandtab
 set tabstop=4
 set shiftwidth=4
