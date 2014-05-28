@@ -11,6 +11,7 @@ nnoremap <silent> <Leader>c :CommandTFlush<CR>
 " toggle hlsearch
 nnoremap <C-H> :set hlsearch! hlsearch?<CR>
 
+" quick escape
 inoremap jj <ESC>
 
 " easier traversal of vim windows
@@ -23,16 +24,23 @@ nnoremap <c-l> <c-w>l
 vnoremap < <gv
 vnoremap > >gv
 
+" move around huge lines more naturally
+nnoremap j gj
+nnoremap k gk
+
 set expandtab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set autoindent
+set smarttab
+set copyindent
 set laststatus=2
 set showmatch
 set incsearch
 set ruler
 set cursorline
+set hidden
 
 hi CursorLine term=bold cterm=bold ctermbg=DarkGrey
 
@@ -57,6 +65,23 @@ set backupskip=/tmp/*,/private/tmp/*
 set stmp
 
 set visualbell
+" turn off error bells
+set noerrorbells
+
+" history
+set history=1000
+set undolevels=1000
+
+" turn off swapfiles
+set nobackup
+set noswapfile
+
+" visualize whitespace
+set list
+set listchars=tab:>.,trail:.,extends:#,nbsp:.
+
+" except for html files
+autocmd filetype html,xml set listchars-=tab:>.
 
 set wildmenu
 set wildmode=list:longest,full
