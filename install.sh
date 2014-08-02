@@ -8,7 +8,7 @@
 ######### vars
 dir=~/dotfiles
 old_dir=~/dotfiles.backup
-files="bash_profile bashrc emacs gitconfig gitconfig.local hashrc profile screenrc tmux.conf vimrc zshrc"
+files="bash_profile bashrc emacs gitconfig gitconfig.local hashrc profile screenrc tmux.conf vimrc zshrc inputrc"
 
 #######################
 
