@@ -43,7 +43,9 @@ set cursorline
 set hidden
 
 hi CursorLine term=bold cterm=bold ctermbg=DarkGrey
+hi OverLength ctermbg=red ctermfg=white guibg=#592929
 
+match OverLength /\%81v.\+/
 filetype indent on
 filetype on
 
@@ -55,7 +57,7 @@ au BufRead,BufNewFile *.ctp     set ft=php
 
 " formatting by filetype
 au FileType python,php setlocal ai ts=4 sw=4 sts=4 tw=80 et
-au Filetype ruby,yaml,haml,html,sass,javascript,css setlocal ai ts=2 sts=2 sw=2 et
+au Filetype ruby,yaml,haml,html,sass,javascript,css,sql setlocal ai ts=2 sts=2 sw=2 et
 
 " copy and paste with the system clipboard
 set clipboard=unnamed
