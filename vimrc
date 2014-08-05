@@ -62,6 +62,9 @@ au Filetype ruby,yaml,haml,html,sass,javascript,css,sql setlocal ai ts=2 sts=2 s
 " copy and paste with the system clipboard
 set clipboard=unnamed
 
+" retain formatting for text pasted into vim
+set paste
+
 set backspace=indent,eol,start
 set backupskip=/tmp/*,/private/tmp/*
 set stmp
