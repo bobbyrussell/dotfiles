@@ -41,6 +41,7 @@ set incsearch
 set ruler
 set cursorline
 set hidden
+set nohlsearch
 
 hi CursorLine term=bold cterm=bold ctermbg=DarkGrey
 
@@ -84,7 +85,7 @@ set list
 set listchars=tab:>.,trail:.,extends:#,nbsp:.
 
 " except for html files
-autocmd filetype html,xml set listchars-=tab:>.
+" au filetype html,xml set listchars-=tab:>.
 
 set wildmenu
 set wildmode=list:longest,full

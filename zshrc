@@ -43,6 +43,7 @@ setopt appendhistory autocd extendedglob histignoredups nonomatch prompt_subst i
 autoload edit-command-line
 zle -N edit-command-line
 bindkey '^x^e' edit-command-line
+bindkey -v
 
 # Partial word history completion
 bindkey '\ep' up-line-or-search

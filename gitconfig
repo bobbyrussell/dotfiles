@@ -61,3 +61,6 @@
 	autosquash = true
 [http]
 	sslVerify = false
+[user]
+	name = Bobby
+	email = bobbyrussell@gmail.com
