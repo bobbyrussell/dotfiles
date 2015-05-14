@@ -28,6 +28,10 @@ vnoremap > >gv
 nnoremap j gj
 nnoremap k gk
 
+" enable project specific vim settings
+set exrc
+set secure
+
 set expandtab
 set tabstop=4
 set shiftwidth=4
