@@ -16,7 +16,7 @@
 	add-untracked = !"git status --porcelain | awk '/\\?\\?/{ print $2 }' | xargs git add"
 	ln = log --pretty=format:'%Cblue%h %Cred* %C(yellow)%s'
     reset-authors = commit --amend --reset-author -CHEAD
-    hist = log --pretty=format:'%C(yellow)%h %Cred* %ad | %Cgreen%s%d [%an]' --graph --date=short
+    hist = log --pretty=format:'%C(yellow)%h %Cred* %ad * %Cgreen%s%d [%an]' --graph --date=short
     type = cat-file -t
     dump = cat-file -p
 [branch]
@@ -61,3 +61,12 @@
 	autosquash = true
 [http]
 	sslVerify = false
+[user]
+	name = Bobby Russell
+	email = bobbyrussell@gmail.com
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
