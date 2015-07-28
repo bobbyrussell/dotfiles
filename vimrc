@@ -102,8 +102,6 @@ set hidden
 
 syntax enable
 set background=dark
-" let g:solarized_termtrans = 1
-" colorscheme solarized
 
 set guifont=Monaco:h16
 set guioptions-=T guioptions-=e guioptions-=L guioptions-=r
