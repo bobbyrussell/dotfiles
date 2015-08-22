@@ -56,12 +56,18 @@ filetype on
 " handle related files
 au BufRead,BufNewFile *.erb     set filetype=ruby
 au BufRead,BufNewFile *.scss    set filetype=css
-au BufRead,BufNewFile *.json    set ft=javascript
-au BufRead,BufNewFile *.ctp     set ft=php
+au BufRead,BufNewFile *.json    set filetype=javascript
+au BufRead,BufNewFile *.ctp     set filetype=php
 
 " formatting by filetype
 au FileType python,php setlocal ai ts=4 sw=4 sts=4 tw=80 et
 au Filetype ruby,yaml,haml,html,sass,javascript,css,sql setlocal ai ts=2 sts=2 sw=2 et
+
+" auto commenting
+let maplocalleader = ","
+au FileType javascript,c nnoremap <buffer> <localleader>x I//<esc>
+au FileType python nnoremap <buffer> <localleader>x I#<esc>
+
 
 " copy and paste with the system clipboard
 set clipboard=unnamed
