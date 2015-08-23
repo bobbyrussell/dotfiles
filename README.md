@@ -1,10 +1,10 @@
 dotfiles
 ========
-These are my dotfiles. I use these when I'm working with a setup other than my own.
+These are my dotfiles. There are many like them, but these are mine.
 
 INSTALL
 -------
-Installation is easy 
+Installation is easy
 ```shell
 ~$ git clone https://github.com/bobbyrussell/dotfiles.git
 ~$ cd dotfiles/
@@ -13,3 +13,13 @@ Installation is easy
 ```
 Easy, right?
 
+USAGE
+-----
+You can manage your files from $HOME/.dotfiles. Files are organized in
+directories.
+
+To update the dotfiles after a pull, rerun `install.sh`.
+
+LICENSE
+-------
+MIT

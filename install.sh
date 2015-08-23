@@ -1,34 +1,33 @@
 #!/bin/bash
-#######################
-# install like this:
-# ~$ cd dotfiles/
-# ~$ ./install.sh
-#######################
+# Backs up the dotfiles in $HOME, copies all the dirs in $RC_FILE_DIRS to
+# $DOTFILE_DIR, and then force symlinks all of the files in $DOTFILE_DIR
+# to corresponding dotfiles in $HOME
 
-######### vars
-dir=~/dotfiles
-old_dir=~/dotfiles.backup
-files="bash_profile bashrc emacs gitconfig gitconfig.local hashrc profile screenrc tmux.conf vimrc zshrc inputrc"
+DOTFILE_DIR="${PWD}"
+DOTFILE_BACKUP_DIR="${HOME}/.dotfile.backups"
+RC_FILE_DIRS="emacs vim mux sh git"
 
-#######################
+if [ ! -d ${DOTFILE_DIR} ]
+then
+    mkdir "${DOTFILE_DIR}"
+fi
 
-######### creating backup... 
-echo -n "Creating $old_dir for to store existing dotfiles in ~ ..."
-mkdir -p $old_dir
-echo "DONE!"
+if [ ! -d "${DOTFILE_BACKUP_DIR}" ]
+then
+    mkdir "${DOTFILE_BACKUP_DIR}"
+fi
 
-######### changing dir to $dir
-echo -n "Changing to the $dir directory..."
-cd $dir
-echo "DONE!"
-
-######### backing up dotfiles into $old_dir...
-echo "Backing up old files and symlinking new files..."
-for file in $files; do 
-	echo "Backing up old .$file ..."
-	mv ~/.$file $old_dir
-	echo "DONE! Symlinking .$file now..."
-	ln -s $dir/$file ~/.$file
+for dir in ${RC_FILE_DIRS}; do
+    for file in ${dir}/*; do
+        if [ -f "${file}" ]
+        then
+            base=`basename ${file}`
+            dotfile="${HOME}/.${base}"
+            if [ -f "${dotfile}" ]
+            then
+                cp "${dotfile}" "${DOTFILE_BACKUP_DIR}"
+            fi
+            ln -fs "${DOTFILE_DIR}/${dir}/${base}" "${dotfile}"
+        fi
+    done
 done
-echo "GOOD JOB! All of your old dotfiles should be backed up"
-echo "BYE BYE!"
