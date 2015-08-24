@@ -15,10 +15,9 @@ Easy, right?
 
 USAGE
 -----
-You can manage your files from $HOME/.dotfiles. Files are organized in
-directories.
-
-To update the dotfiles after a pull, rerun `install.sh`.
+You can manage your files from the pwd of this repo. This should be
+$HOME/dotfiles. Files are organized in directories. Sync upstream changes with
+`git pull`.
 
 LICENSE
 -------
