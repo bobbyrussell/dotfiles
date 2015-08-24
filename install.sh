@@ -22,12 +22,17 @@ for dir in ${RC_FILE_DIRS}; do
         if [ -f "${file}" ]
         then
             base=`basename ${file}`
-            dotfile="${HOME}/.${base}"
-            if [ -f "${dotfile}" ]
+            old_dotfile="${HOME}/.${base}"
+            new_dotfile="${DOTFILE_DIR}/${dir}/${base}"
+            if [ -f "${old_dotfile}" ]
             then
-                cp "${dotfile}" "${DOTFILE_BACKUP_DIR}"
+                echo "Backing up ${old_dotfile} to ${DOTFILE_BACKUP_DIR}"
+                cp "${old_dotfile}" "${DOTFILE_BACKUP_DIR}"
             fi
-            ln -fs "${DOTFILE_DIR}/${dir}/${base}" "${dotfile}"
+            echo "Linking ${new_dotfile} to ${old_dotfile}"
+            ln -fs "${new_dotfile}" "${old_dotfile}"
         fi
     done
 done
+
+echo "Finished installing the dotfiles. You can manage them from ${DOTFILE_DIR}"
