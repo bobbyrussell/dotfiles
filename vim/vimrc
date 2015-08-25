@@ -85,6 +85,9 @@ set visualbell
 " turn off error bells
 set noerrorbells
 
+" remember where you are in a buffer, across sessions
+set viminfo='10,\"100,:20,%,n~/.viminfo
+
 " history
 set history=1000
 set undolevels=1000
