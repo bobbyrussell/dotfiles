@@ -110,6 +110,9 @@ set shell=bash
 
 set nu
 
+" remember where you are in a buffer, across sessions
+set viminfo='10,\"100,:20,%,n~/.viminfo
+
 augroup vimrc
   autocmd!
   autocmd GuiEnter * set columns=120 lines=70 number
