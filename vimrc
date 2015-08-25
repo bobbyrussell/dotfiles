@@ -56,6 +56,7 @@ au BufRead,BufNewFile *.erb     set filetype=ruby
 au BufRead,BufNewFile *.scss    set filetype=css
 au BufRead,BufNewFile *.json    set ft=javascript
 au BufRead,BufNewFile *.ctp     set ft=php
+au BufRead,BufNewFile *.tac     set ft=python
 
 " formatting by filetype
 au FileType python,php setlocal ai ts=4 sw=4 sts=4 tw=80 et
