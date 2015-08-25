@@ -1,12 +1,10 @@
+" load pathogen
 execute pathogen#infect()
 
-syntax on
-filetype plugin indent on
-
-" CommandT stuff
-nnoremap <silent> <Leader>t :CommandT<CR>
-nnoremap <silent> <Leader>b :CommandTBuffer<CR>
-nnoremap <silent> <Leader>c :CommandTFlush<CR>
+" CtrlP
+nnoremap <silent> <Leader>t :CtrlP<CR>
+nnoremap <silent> <Leader>b :CtrlPBuffer<CR>
+nnoremap <silent> <Leader>c :CtrlPClearCache<CR>
 
 " toggle hlsearch
 nnoremap <C-H> :set hlsearch! hlsearch?<CR>
@@ -46,13 +44,16 @@ set ruler
 set cursorline
 set hidden
 set nohlsearch
+set nu
 
 hi CursorLine term=bold cterm=bold ctermbg=DarkGrey
 hi OverLength ctermbg=red ctermfg=white guibg=#592929
 
 match OverLength /\%81v.\+/
-filetype indent on
-filetype on
+
+" enable language specific settings
+syntax on
+filetype plugin indent on
 
 " handle related files
 au BufRead,BufNewFile *.erb     set filetype=ruby
@@ -113,8 +114,6 @@ set background=dark
 set guifont=Monaco:h16
 set guioptions-=T guioptions-=e guioptions-=L guioptions-=r
 set shell=bash
-
-set nu
 
 augroup vimrc
   autocmd!
