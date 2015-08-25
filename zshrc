@@ -110,6 +110,8 @@ cdpath=(~ ~/src $DEV_DIR $HASHROCKET_DIR)
 if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then source "$HOME/.rvm/scripts/rvm" ; fi
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
+export PATH=$PATH:$HOME/bin
+
 cuke() {
   local file="$1"
   shift
