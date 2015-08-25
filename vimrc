@@ -28,6 +28,9 @@ vnoremap > >gv
 nnoremap j gj
 nnoremap k gk
 
+set exrc
+set secure
+
 set expandtab
 set tabstop=4
 set shiftwidth=4
