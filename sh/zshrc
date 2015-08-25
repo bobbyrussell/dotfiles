@@ -50,6 +50,9 @@ bindkey '\ep' up-line-or-search
 bindkey '\en' down-line-or-search
 bindkey '\ew' kill-region
 
+# Incremental search
+bindkey '^R' history-incremental-search-backward
+
 if [ -z "$TMUX" ]; then
   fg-widget() {
     stty icanon echo pendin -inlcr < /dev/tty
