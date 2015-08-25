@@ -1,2 +1,2 @@
-# Only ignore gitconfig.local
-gitconfig.local
+# Keep .local files private
+*.local
