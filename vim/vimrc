@@ -4,6 +4,12 @@ execute pathogen#infect()
 " Strip trailing whitespace
 nnoremap <silent> <Leader>a :silent! %s/\s\+$//g<CR>
 
+" Open vimrc in a new buffer
+nnoremap <Leader>er :e ~/.vimrc<CR>
+
+" Source vimrc
+nnoremap <Leader>so :source ~/.vimrc<CR>
+
 " CtrlP
 nnoremap <silent> <Leader>t :CtrlP<CR>
 nnoremap <silent> <Leader>b :CtrlPBuffer<CR>
