@@ -4,7 +4,6 @@
 source "$HOME/.hashrc"
 
 alias l='ls -l'
-#alias rm='rm -i'
 set -o vi
 
 # Store 10,000 history entries
