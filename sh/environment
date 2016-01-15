@@ -1,0 +1,22 @@
+# vim:set ft=sh sw=4 sts=4:
+
+if [ -e $HOME/.environment ]
+then
+    . $HOME/.environment
+fi
+
+if [ -e /usr/local/bin/reattach-to-user-namespace ]
+then
+    export PATH=$PATH:/usr/local/bin/reattach-to-user-namespace
+fi
+
+if [ -s $HOME/.rvm/scripts/rvm ]
+then
+    . $HOME/.rvm/scripts/rvm
+fi
+
+. $HOME/.hashrc
+
+export SVN_EDITOR=vim
+export EDITOR=vim
+export PATH=$PATH:$HOME/.rvm/bin
