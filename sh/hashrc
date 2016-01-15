@@ -1,4 +1,3 @@
-# ~/.hashrc
 # vim:set ft=sh sw=2 sts=2:
 
 [ -e "$HASHROCKET_DIR" ] || HASHROCKET_DIR="$HOME/hashrocket"
