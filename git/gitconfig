@@ -23,7 +23,8 @@
     add-untracked = !"git status --porcelain | awk '/\\?\\?/{ print $2 }' | xargs git add"
     ln = log --pretty=format:'%Cblue%h %Cred* %C(yellow)%s'
     reset-authors = commit --amend --reset-author -CHEAD
-    hist = log --pretty=format:'%C(yellow)%h %Creset* %Cred%ad %Creset(%Cred%ar%Creset) * %Cgreen%s%C(auto)%d %Creset[%Cblue%an%Creset]' --graph --date=short
+    hist = log --graph --date=short \
+        --pretty=format:'%C(yellow)%h %Creset* %Cred%ad %Creset(%Cred%ar%Creset) * %Cgreen%s%C(auto)%d %Creset[%Cblue%an%Creset]'
     type = cat-file -t
     dump = cat-file -p
 [branch]
