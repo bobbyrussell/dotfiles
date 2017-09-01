@@ -5,7 +5,7 @@
     cp = cherry-pick
     put = push origin HEAD
     ri = rebase --interactive
-    br = branch
+    br = rev-parse --abbrev-ref HEAD
     add-untracked = !"git status --porcelain | awk '/\\?\\?/{ print $2 }' | xargs git add"
     reset-authors = commit --amend --reset-author -CHEAD
     hist = log --graph --date=short \
