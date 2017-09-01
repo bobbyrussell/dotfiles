@@ -53,6 +53,7 @@ set ruler
 set cursorline
 set hidden
 set nohlsearch
+set nolist
 set nu
 
 hi CursorLine term=bold cterm=bold ctermbg=DarkGrey
