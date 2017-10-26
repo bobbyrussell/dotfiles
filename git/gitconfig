@@ -36,3 +36,5 @@
     autosquash = true
 [http]
     sslVerify = false
+[credential]
+    helper = osxkeychain
