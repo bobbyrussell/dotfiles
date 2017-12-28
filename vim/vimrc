@@ -91,7 +91,7 @@ set backspace=indent,eol,start
 set backupskip=/tmp/*,/private/tmp/*
 set stmp
 
-set visualbell
+set novisualbell
 " turn off error bells
 set noerrorbells
 
