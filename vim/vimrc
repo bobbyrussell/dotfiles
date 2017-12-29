@@ -109,10 +109,10 @@ set noswapfile
 
 " visualize whitespace
 set list
-set listchars=tab:>.,trail:.,extends:#,nbsp:.
+set listchars=nbsp:¬,extends:»,precedes:«,trail:•,tab:».
 
 " except for html files
-au FileType html,xml set listchars-=tab:>.
+au FileType html,xml set listchars-=tab:».
 
 set wildmenu
 set wildmode=list:longest,full
