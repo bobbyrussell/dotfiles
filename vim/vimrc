@@ -70,7 +70,9 @@ au BufRead,BufNewFile *.erb          set filetype=ruby
 au BufRead,BufNewFile *.scss         set filetype=css
 au BufRead,BufNewFile *.ctp          set filetype=php
 au BufRead,BufNewFile *.tac          set filetype=python
-au BufRead,BufNewFile Jenkinsfile*   set filetype=groovy
+au BufRead,BufNewFile Jenkinsfile*   set filetype=ruby
+au BufRead,BufNewFile *.hcl          set filetype=ruby
+au BufRead,BufNewFile *.tf           set filetype=ruby
 
 " formatting by filetype
 au FileType python,php
